@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3695BBA01CB2BDF300A6AC41 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3695BB9E1CB2BDF300A6AC41 /* Info.plist */; };
 		3695BBA11CB2BDF300A6AC41 /* PerfHarnessUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3695BB9F1CB2BDF300A6AC41 /* PerfHarnessUnitTests.m */; };
-		4B048F36386F631C213B444E /* libPods-PerfHarnessUnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 510BCAB64B373A52CDA82498 /* libPods-PerfHarnessUnitTests.a */; };
-		606C65825E351E8518F97489 /* libPods-PerfHarness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8FCA03D42DAECE1090E2A1 /* libPods-PerfHarness.a */; };
 		B8B8D26B1CA9C39E00B46533 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D2681CA9C39E00B46533 /* CoreGraphics.framework */; };
 		B8B8D26C1CA9C39E00B46533 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D2691CA9C39E00B46533 /* libc++.tbd */; };
 		B8B8D26D1CA9C39E00B46533 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D26A1CA9C39E00B46533 /* UIKit.framework */; };
@@ -44,13 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C8FCA03D42DAECE1090E2A1 /* libPods-PerfHarness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PerfHarness.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3634C0EF1CB2F00C00298E7E /* fbaLib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fbaLib.cpp; sourceTree = "<group>"; };
-		3634C0F01CB2F00C00298E7E /* fbaLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fbaLib.h; sourceTree = "<group>"; };
 		3695BB9E1CB2BDF300A6AC41 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3695BB9F1CB2BDF300A6AC41 /* PerfHarnessUnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerfHarnessUnitTests.m; sourceTree = "<group>"; };
 		36B4EB9D1CB2AF06000B432D /* PerfHarnessUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerfHarnessUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		510BCAB64B373A52CDA82498 /* libPods-PerfHarnessUnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PerfHarnessUnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B8D2681CA9C39E00B46533 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B8B8D2691CA9C39E00B46533 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		B8B8D26A1CA9C39E00B46533 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -82,7 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B048F36386F631C213B444E /* libPods-PerfHarnessUnitTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,22 +86,12 @@
 				B8B8D26B1CA9C39E00B46533 /* CoreGraphics.framework in Frameworks */,
 				B8B8D26C1CA9C39E00B46533 /* libc++.tbd in Frameworks */,
 				B8B8D26D1CA9C39E00B46533 /* UIKit.framework in Frameworks */,
-				606C65825E351E8518F97489 /* libPods-PerfHarness.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3634C0EE1CB2F00C00298E7E /* fbaLib */ = {
-			isa = PBXGroup;
-			children = (
-				3634C0EF1CB2F00C00298E7E /* fbaLib.cpp */,
-				3634C0F01CB2F00C00298E7E /* fbaLib.h */,
-			);
-			path = fbaLib;
-			sourceTree = "<group>";
-		};
 		36B4EB9E1CB2AF06000B432D /* PerfHarnessUnitTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,8 +107,6 @@
 				B8B8D2681CA9C39E00B46533 /* CoreGraphics.framework */,
 				B8B8D2691CA9C39E00B46533 /* libc++.tbd */,
 				B8B8D26A1CA9C39E00B46533 /* UIKit.framework */,
-				2C8FCA03D42DAECE1090E2A1 /* libPods-PerfHarness.a */,
-				510BCAB64B373A52CDA82498 /* libPods-PerfHarnessUnitTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -151,7 +132,6 @@
 		B8CE6E1A1CA9A9C6006D8D23 = {
 			isa = PBXGroup;
 			children = (
-				3634C0EE1CB2F00C00298E7E /* fbaLib */,
 				B8CE6E251CA9A9C6006D8D23 /* PerfHarness */,
 				36B4EB9E1CB2AF06000B432D /* PerfHarnessUnitTests */,
 				B8CE6E241CA9A9C6006D8D23 /* Products */,
