@@ -15,7 +15,6 @@
 		B8CE6E2B1CA9A9C7006D8D23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E2A1CA9A9C7006D8D23 /* AppDelegate.m */; };
 		B8CE6E2E1CA9A9C7006D8D23 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E2D1CA9A9C7006D8D23 /* ViewController.m */; };
 		B8CE6E311CA9A9C7006D8D23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8CE6E2F1CA9A9C7006D8D23 /* Main.storyboard */; };
-		B8CE6E331CA9A9C7006D8D23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8CE6E321CA9A9C7006D8D23 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -184,7 +183,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8CE6E331CA9A9C7006D8D23 /* Assets.xcassets in Resources */,
 				B8B8D2771CA9C63C00B46533 /* puppy.jpg in Resources */,
 				B8CE6E311CA9A9C7006D8D23 /* Main.storyboard in Resources */,
 			);
