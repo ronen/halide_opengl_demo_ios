@@ -8,10 +8,6 @@
 
 #import "ViewController.h"
 
-#import <MBProgressHUD/MBProgressHUD.h>
-#import "PERFImagingFunction.h"
-#import "UIImage+Transform.h"
-
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end

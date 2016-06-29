@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3634C0F11CB2F00C00298E7E /* fbaLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3634C0EF1CB2F00C00298E7E /* fbaLib.cpp */; };
 		3695BBA01CB2BDF300A6AC41 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3695BB9E1CB2BDF300A6AC41 /* Info.plist */; };
 		3695BBA11CB2BDF300A6AC41 /* PerfHarnessUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3695BB9F1CB2BDF300A6AC41 /* PerfHarnessUnitTests.m */; };
 		4B048F36386F631C213B444E /* libPods-PerfHarnessUnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 510BCAB64B373A52CDA82498 /* libPods-PerfHarnessUnitTests.a */; };
@@ -15,8 +14,6 @@
 		B8B8D26B1CA9C39E00B46533 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D2681CA9C39E00B46533 /* CoreGraphics.framework */; };
 		B8B8D26C1CA9C39E00B46533 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D2691CA9C39E00B46533 /* libc++.tbd */; };
 		B8B8D26D1CA9C39E00B46533 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D26A1CA9C39E00B46533 /* UIKit.framework */; };
-		B8B8D2731CA9C59100B46533 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = B8B8D2701CA9C59100B46533 /* UIImage+OpenCV.mm */; };
-		B8B8D2741CA9C59100B46533 /* UIImage+Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8D2721CA9C59100B46533 /* UIImage+Transform.m */; };
 		B8B8D2771CA9C63C00B46533 /* puppy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8B8D2761CA9C63C00B46533 /* puppy.jpg */; };
 		B8CE6E281CA9A9C7006D8D23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E271CA9A9C7006D8D23 /* main.m */; };
 		B8CE6E2B1CA9A9C7006D8D23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E2A1CA9A9C7006D8D23 /* AppDelegate.m */; };
@@ -24,14 +21,11 @@
 		B8CE6E311CA9A9C7006D8D23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8CE6E2F1CA9A9C7006D8D23 /* Main.storyboard */; };
 		B8CE6E331CA9A9C7006D8D23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8CE6E321CA9A9C7006D8D23 /* Assets.xcassets */; };
 		B8CE6E361CA9A9C7006D8D23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8CE6E341CA9A9C7006D8D23 /* LaunchScreen.storyboard */; };
-		B8CE6E411CA9AA7B006D8D23 /* PERFImagingFunction.mm in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E401CA9AA7B006D8D23 /* PERFImagingFunction.mm */; };
-		B8CE6E451CA9AD54006D8D23 /* ImagingFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E441CA9AD54006D8D23 /* ImagingFunc.cpp */; };
 		B8E5D2311CAB495700D9B3BC /* REG_001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D22C1CAB495700D9B3BC /* REG_001.jpg */; };
 		B8E5D2321CAB495700D9B3BC /* REG_002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D22D1CAB495700D9B3BC /* REG_002.jpg */; };
 		B8E5D2331CAB495700D9B3BC /* REG_003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D22E1CAB495700D9B3BC /* REG_003.jpg */; };
 		B8E5D2341CAB495700D9B3BC /* REG_004.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D22F1CAB495700D9B3BC /* REG_004.jpg */; };
 		B8E5D2351CAB495700D9B3BC /* REG_005.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D2301CAB495700D9B3BC /* REG_005.jpg */; };
-		B8E5D2381CAB5B3800D9B3BC /* PERFTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E5D2371CAB5B3800D9B3BC /* PERFTimer.m */; };
 		B8E5D23E1CAB80BA00D9B3BC /* REG_006.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D2391CAB80BA00D9B3BC /* REG_006.jpg */; };
 		B8E5D23F1CAB80BA00D9B3BC /* REG_007.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D23A1CAB80BA00D9B3BC /* REG_007.jpg */; };
 		B8E5D2401CAB80BA00D9B3BC /* REG_008.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D23B1CAB80BA00D9B3BC /* REG_008.jpg */; };
@@ -60,15 +54,9 @@
 		4BDA77B0904EF13C0881F8E0 /* Pods-PerfHarness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfHarness.release.xcconfig"; path = "Pods/Target Support Files/Pods-PerfHarness/Pods-PerfHarness.release.xcconfig"; sourceTree = "<group>"; };
 		510BCAB64B373A52CDA82498 /* libPods-PerfHarnessUnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PerfHarnessUnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		545CBB98C31B90CF9FC29466 /* Pods-PerfHarness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfHarness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PerfHarness/Pods-PerfHarness.debug.xcconfig"; sourceTree = "<group>"; };
-		B87149B81CA9D11000B6F5D3 /* fbaLib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fbaLib.cpp; sourceTree = "<group>"; };
-		B87149B91CA9D11000B6F5D3 /* fbaLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fbaLib.h; sourceTree = "<group>"; };
 		B8B8D2681CA9C39E00B46533 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B8B8D2691CA9C39E00B46533 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		B8B8D26A1CA9C39E00B46533 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		B8B8D26F1CA9C59100B46533 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
-		B8B8D2701CA9C59100B46533 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
-		B8B8D2711CA9C59100B46533 /* UIImage+Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Transform.h"; sourceTree = "<group>"; };
-		B8B8D2721CA9C59100B46533 /* UIImage+Transform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Transform.m"; sourceTree = "<group>"; };
 		B8B8D2761CA9C63C00B46533 /* puppy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = puppy.jpg; sourceTree = "<group>"; };
 		B8CE6E231CA9A9C6006D8D23 /* PerfHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CE6E271CA9A9C7006D8D23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -82,8 +70,6 @@
 		B8CE6E371CA9A9C7006D8D23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8CE6E3F1CA9AA7B006D8D23 /* PERFImagingFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PERFImagingFunction.h; sourceTree = "<group>"; };
 		B8CE6E401CA9AA7B006D8D23 /* PERFImagingFunction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PERFImagingFunction.mm; sourceTree = "<group>"; };
-		B8CE6E431CA9AD44006D8D23 /* ImagingFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagingFunc.h; sourceTree = "<group>"; };
-		B8CE6E441CA9AD54006D8D23 /* ImagingFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImagingFunc.cpp; sourceTree = "<group>"; };
 		B8E5D22C1CAB495700D9B3BC /* REG_001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_001.jpg; sourceTree = "<group>"; };
 		B8E5D22D1CAB495700D9B3BC /* REG_002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_002.jpg; sourceTree = "<group>"; };
 		B8E5D22E1CAB495700D9B3BC /* REG_003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_003.jpg; sourceTree = "<group>"; };
@@ -152,17 +138,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B8B8D26E1CA9C59100B46533 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				B8B8D26F1CA9C59100B46533 /* UIImage+OpenCV.h */,
-				B8B8D2701CA9C59100B46533 /* UIImage+OpenCV.mm */,
-				B8B8D2711CA9C59100B46533 /* UIImage+Transform.h */,
-				B8B8D2721CA9C59100B46533 /* UIImage+Transform.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
 		B8B8D2751CA9C5A100B46533 /* TestImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,8 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				B8B8D2751CA9C5A100B46533 /* TestImages */,
-				B8B8D26E1CA9C59100B46533 /* Categories */,
-				B8CE6E421CA9AD15006D8D23 /* CPPImpl */,
 				B8CE6E291CA9A9C7006D8D23 /* AppDelegate.h */,
 				B8CE6E2A1CA9A9C7006D8D23 /* AppDelegate.m */,
 				B8CE6E2C1CA9A9C7006D8D23 /* ViewController.h */,
@@ -231,17 +204,6 @@
 				B8CE6E271CA9A9C7006D8D23 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B8CE6E421CA9AD15006D8D23 /* CPPImpl */ = {
-			isa = PBXGroup;
-			children = (
-				B87149B81CA9D11000B6F5D3 /* fbaLib.cpp */,
-				B87149B91CA9D11000B6F5D3 /* fbaLib.h */,
-				B8CE6E431CA9AD44006D8D23 /* ImagingFunc.h */,
-				B8CE6E441CA9AD54006D8D23 /* ImagingFunc.cpp */,
-			);
-			path = CPPImpl;
 			sourceTree = "<group>";
 		};
 		C035EF120D08A8CCDB87C799 /* Pods */ = {
@@ -476,14 +438,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8CE6E2E1CA9A9C7006D8D23 /* ViewController.m in Sources */,
-				B8E5D2381CAB5B3800D9B3BC /* PERFTimer.m in Sources */,
 				B8CE6E2B1CA9A9C7006D8D23 /* AppDelegate.m in Sources */,
 				B8CE6E281CA9A9C7006D8D23 /* main.m in Sources */,
-				B8CE6E411CA9AA7B006D8D23 /* PERFImagingFunction.mm in Sources */,
-				B8B8D2741CA9C59100B46533 /* UIImage+Transform.m in Sources */,
-				3634C0F11CB2F00C00298E7E /* fbaLib.cpp in Sources */,
-				B8B8D2731CA9C59100B46533 /* UIImage+OpenCV.mm in Sources */,
-				B8CE6E451CA9AD54006D8D23 /* ImagingFunc.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
