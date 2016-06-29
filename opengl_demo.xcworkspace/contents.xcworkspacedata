@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:PerfHarness.xcodeproj">
+      location = "group:opengl_demo.xcodeproj">
    </FileRef>
 </Workspace>

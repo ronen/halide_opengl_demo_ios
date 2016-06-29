@@ -3,13 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B8B8D26B1CA9C39E00B46533 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D2681CA9C39E00B46533 /* CoreGraphics.framework */; };
 		B8B8D26C1CA9C39E00B46533 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D2691CA9C39E00B46533 /* libc++.tbd */; };
-		B8B8D26D1CA9C39E00B46533 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D26A1CA9C39E00B46533 /* UIKit.framework */; };
 		B8B8D2771CA9C63C00B46533 /* puppy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8B8D2761CA9C63C00B46533 /* puppy.jpg */; };
 		B8CE6E281CA9A9C7006D8D23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E271CA9A9C7006D8D23 /* main.m */; };
 		B8CE6E2B1CA9A9C7006D8D23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E2A1CA9A9C7006D8D23 /* AppDelegate.m */; };
@@ -18,18 +16,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B8B8D2681CA9C39E00B46533 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B8B8D2691CA9C39E00B46533 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		B8B8D26A1CA9C39E00B46533 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B8B8D2761CA9C63C00B46533 /* puppy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = puppy.jpg; sourceTree = "<group>"; };
-		B8CE6E231CA9A9C6006D8D23 /* PerfHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8CE6E231CA9A9C6006D8D23 /* opengl_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = opengl_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CE6E271CA9A9C7006D8D23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B8CE6E291CA9A9C7006D8D23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8CE6E2A1CA9A9C7006D8D23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B8CE6E2C1CA9A9C7006D8D23 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B8CE6E2D1CA9A9C7006D8D23 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B8CE6E301CA9A9C7006D8D23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B8CE6E321CA9A9C7006D8D23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8CE6E371CA9A9C7006D8D23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8E5D22C1CAB495700D9B3BC /* REG_001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_001.jpg; sourceTree = "<group>"; };
 		B8E5D22D1CAB495700D9B3BC /* REG_002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_002.jpg; sourceTree = "<group>"; };
@@ -48,9 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8B8D26B1CA9C39E00B46533 /* CoreGraphics.framework in Frameworks */,
 				B8B8D26C1CA9C39E00B46533 /* libc++.tbd in Frameworks */,
-				B8B8D26D1CA9C39E00B46533 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +53,7 @@
 		91A4212EEBA394A696B3907D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B8B8D2681CA9C39E00B46533 /* CoreGraphics.framework */,
 				B8B8D2691CA9C39E00B46533 /* libc++.tbd */,
-				B8B8D26A1CA9C39E00B46533 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,7 +79,7 @@
 		B8CE6E1A1CA9A9C6006D8D23 = {
 			isa = PBXGroup;
 			children = (
-				B8CE6E251CA9A9C6006D8D23 /* PerfHarness */,
+				B8CE6E251CA9A9C6006D8D23 /* opengl_demo */,
 				B8CE6E241CA9A9C6006D8D23 /* Products */,
 				91A4212EEBA394A696B3907D /* Frameworks */,
 			);
@@ -97,12 +88,12 @@
 		B8CE6E241CA9A9C6006D8D23 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B8CE6E231CA9A9C6006D8D23 /* PerfHarness.app */,
+				B8CE6E231CA9A9C6006D8D23 /* opengl_demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B8CE6E251CA9A9C6006D8D23 /* PerfHarness */ = {
+		B8CE6E251CA9A9C6006D8D23 /* opengl_demo */ = {
 			isa = PBXGroup;
 			children = (
 				B8B8D2751CA9C5A100B46533 /* TestImages */,
@@ -111,11 +102,10 @@
 				B8CE6E2C1CA9A9C7006D8D23 /* ViewController.h */,
 				B8CE6E2D1CA9A9C7006D8D23 /* ViewController.m */,
 				B8CE6E2F1CA9A9C7006D8D23 /* Main.storyboard */,
-				B8CE6E321CA9A9C7006D8D23 /* Assets.xcassets */,
 				B8CE6E371CA9A9C7006D8D23 /* Info.plist */,
 				B8CE6E261CA9A9C7006D8D23 /* Supporting Files */,
 			);
-			path = PerfHarness;
+			path = opengl_demo;
 			sourceTree = "<group>";
 		};
 		B8CE6E261CA9A9C7006D8D23 /* Supporting Files */ = {
@@ -129,9 +119,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B8CE6E221CA9A9C6006D8D23 /* PerfHarness */ = {
+		B8CE6E221CA9A9C6006D8D23 /* opengl_demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B8CE6E3A1CA9A9C7006D8D23 /* Build configuration list for PBXNativeTarget "PerfHarness" */;
+			buildConfigurationList = B8CE6E3A1CA9A9C7006D8D23 /* Build configuration list for PBXNativeTarget "opengl_demo" */;
 			buildPhases = (
 				B8CE6E1F1CA9A9C6006D8D23 /* Sources */,
 				B8CE6E201CA9A9C6006D8D23 /* Frameworks */,
@@ -141,9 +131,9 @@
 			);
 			dependencies = (
 			);
-			name = PerfHarness;
-			productName = PerfHarness;
-			productReference = B8CE6E231CA9A9C6006D8D23 /* PerfHarness.app */;
+			name = opengl_demo;
+			productName = opengl_demo;
+			productReference = B8CE6E231CA9A9C6006D8D23 /* opengl_demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -157,11 +147,12 @@
 				TargetAttributes = {
 					B8CE6E221CA9A9C6006D8D23 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = M5MDYTPX4P;
 					};
 				};
 			};
-			buildConfigurationList = B8CE6E1E1CA9A9C6006D8D23 /* Build configuration list for PBXProject "PerfHarness" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = B8CE6E1E1CA9A9C6006D8D23 /* Build configuration list for PBXProject "opengl_demo" */;
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -173,7 +164,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B8CE6E221CA9A9C6006D8D23 /* PerfHarness */,
+				B8CE6E221CA9A9C6006D8D23 /* opengl_demo */,
 			);
 		};
 /* End PBXProject section */
@@ -304,12 +295,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = PerfHarness/Info.plist;
+				INFOPLIST_FILE = opengl_demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.labs.PerfHarness;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.labs.opengl-demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -318,19 +312,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = PerfHarness/Info.plist;
+				INFOPLIST_FILE = opengl_demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.labs.PerfHarness;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.labs.opengl-demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B8CE6E1E1CA9A9C6006D8D23 /* Build configuration list for PBXProject "PerfHarness" */ = {
+		B8CE6E1E1CA9A9C6006D8D23 /* Build configuration list for PBXProject "opengl_demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8CE6E381CA9A9C7006D8D23 /* Debug */,
@@ -339,7 +336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B8CE6E3A1CA9A9C7006D8D23 /* Build configuration list for PBXNativeTarget "PerfHarness" */ = {
+		B8CE6E3A1CA9A9C7006D8D23 /* Build configuration list for PBXNativeTarget "opengl_demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8CE6E3B1CA9A9C7006D8D23 /* Debug */,
