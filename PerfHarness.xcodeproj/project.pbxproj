@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3695BBA01CB2BDF300A6AC41 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3695BB9E1CB2BDF300A6AC41 /* Info.plist */; };
-		3695BBA11CB2BDF300A6AC41 /* PerfHarnessUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3695BB9F1CB2BDF300A6AC41 /* PerfHarnessUnitTests.m */; };
 		B8B8D26B1CA9C39E00B46533 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D2681CA9C39E00B46533 /* CoreGraphics.framework */; };
 		B8B8D26C1CA9C39E00B46533 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D2691CA9C39E00B46533 /* libc++.tbd */; };
 		B8B8D26D1CA9C39E00B46533 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D26A1CA9C39E00B46533 /* UIKit.framework */; };
@@ -31,20 +29,7 @@
 		B8E5D2421CAB80BA00D9B3BC /* REG_010.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D23D1CAB80BA00D9B3BC /* REG_010.jpg */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		36B4EBA21CB2AF06000B432D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B8CE6E1B1CA9A9C6006D8D23 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B8CE6E221CA9A9C6006D8D23;
-			remoteInfo = PerfHarness;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		3695BB9E1CB2BDF300A6AC41 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3695BB9F1CB2BDF300A6AC41 /* PerfHarnessUnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerfHarnessUnitTests.m; sourceTree = "<group>"; };
-		36B4EB9D1CB2AF06000B432D /* PerfHarnessUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerfHarnessUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B8D2681CA9C39E00B46533 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B8B8D2691CA9C39E00B46533 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		B8B8D26A1CA9C39E00B46533 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -72,13 +57,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		36B4EB9A1CB2AF06000B432D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B8CE6E201CA9A9C6006D8D23 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,15 +70,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		36B4EB9E1CB2AF06000B432D /* PerfHarnessUnitTests */ = {
-			isa = PBXGroup;
-			children = (
-				3695BB9E1CB2BDF300A6AC41 /* Info.plist */,
-				3695BB9F1CB2BDF300A6AC41 /* PerfHarnessUnitTests.m */,
-			);
-			path = PerfHarnessUnitTests;
-			sourceTree = "<group>";
-		};
 		91A4212EEBA394A696B3907D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				B8CE6E251CA9A9C6006D8D23 /* PerfHarness */,
-				36B4EB9E1CB2AF06000B432D /* PerfHarnessUnitTests */,
 				B8CE6E241CA9A9C6006D8D23 /* Products */,
 				91A4212EEBA394A696B3907D /* Frameworks */,
 			);
@@ -143,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				B8CE6E231CA9A9C6006D8D23 /* PerfHarness.app */,
-				36B4EB9D1CB2AF06000B432D /* PerfHarnessUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,27 +143,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		36B4EB9C1CB2AF06000B432D /* PerfHarnessUnitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 36B4EBA61CB2AF06000B432D /* Build configuration list for PBXNativeTarget "PerfHarnessUnitTests" */;
-			buildPhases = (
-				76125C8EA5EC2779529FFB79 /* 📦 Check Pods Manifest.lock */,
-				36B4EB991CB2AF06000B432D /* Sources */,
-				36B4EB9A1CB2AF06000B432D /* Frameworks */,
-				36B4EB9B1CB2AF06000B432D /* Resources */,
-				2D0EF8181AE7840FA27E063C /* 📦 Embed Pods Frameworks */,
-				02505C91BF8725394B6602E3 /* 📦 Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				36B4EBA31CB2AF06000B432D /* PBXTargetDependency */,
-			);
-			name = PerfHarnessUnitTests;
-			productName = PerfHarnessUnitTests;
-			productReference = 36B4EB9D1CB2AF06000B432D /* PerfHarnessUnitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		B8CE6E221CA9A9C6006D8D23 /* PerfHarness */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8CE6E3A1CA9A9C7006D8D23 /* Build configuration list for PBXNativeTarget "PerfHarness" */;
@@ -223,11 +169,6 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Adobe Labs";
 				TargetAttributes = {
-					36B4EB9C1CB2AF06000B432D = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = M5MDYTPX4P;
-						TestTargetID = B8CE6E221CA9A9C6006D8D23;
-					};
 					B8CE6E221CA9A9C6006D8D23 = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -247,20 +188,11 @@
 			projectRoot = "";
 			targets = (
 				B8CE6E221CA9A9C6006D8D23 /* PerfHarness */,
-				36B4EB9C1CB2AF06000B432D /* PerfHarnessUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		36B4EB9B1CB2AF06000B432D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3695BBA01CB2BDF300A6AC41 /* Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B8CE6E211CA9A9C6006D8D23 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,63 +216,7 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		02505C91BF8725394B6602E3 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PerfHarnessUnitTests/Pods-PerfHarnessUnitTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2D0EF8181AE7840FA27E063C /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PerfHarnessUnitTests/Pods-PerfHarnessUnitTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		76125C8EA5EC2779529FFB79 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		36B4EB991CB2AF06000B432D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3695BBA11CB2BDF300A6AC41 /* PerfHarnessUnitTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B8CE6E1F1CA9A9C6006D8D23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,14 +228,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		36B4EBA31CB2AF06000B432D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B8CE6E221CA9A9C6006D8D23 /* PerfHarness */;
-			targetProxy = 36B4EBA21CB2AF06000B432D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B8CE6E2F1CA9A9C7006D8D23 /* Main.storyboard */ = {
@@ -381,40 +249,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		36B4EBA41CB2AF06000B432D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-					"BH_REFERENCE_IMAGE_DIR=\"\\\"$(SOURCE_ROOT)/$(PROJECT_NAME)UnitTests/ReferenceImages\\\"\"",
-				);
-				INFOPLIST_FILE = PerfHarnessUnitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.testbenchsearch.PerfHarnessUnitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerfHarness.app/PerfHarness";
-			};
-			name = Debug;
-		};
-		36B4EBA51CB2AF06000B432D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-					"BH_REFERENCE_IMAGE_DIR=\"\\\"$(SOURCE_ROOT)/$(PROJECT_NAME)UnitTests/ReferenceImages\\\"\"",
-				);
-				INFOPLIST_FILE = PerfHarnessUnitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.testbenchsearch.PerfHarnessUnitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerfHarness.app/PerfHarness";
-			};
-			name = Release;
-		};
 		B8CE6E381CA9A9C7006D8D23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -530,15 +364,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		36B4EBA61CB2AF06000B432D /* Build configuration list for PBXNativeTarget "PerfHarnessUnitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				36B4EBA41CB2AF06000B432D /* Debug */,
-				36B4EBA51CB2AF06000B432D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B8CE6E1E1CA9A9C6006D8D23 /* Build configuration list for PBXProject "PerfHarness" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
