@@ -1,7 +1,0 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/OpenCV" "${PODS_ROOT}/Headers/Public/adobe.ctl.BHImageTestCase"
-LIBRARY_SEARCH_PATHS = $(inherited) "$CONFIGURATION_BUILD_DIR/adobe.ctl.BHImageTestCase"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/MBProgressHUD" -isystem "${PODS_ROOT}/Headers/Public/OpenCV" -isystem "${PODS_ROOT}/Headers/Public/adobe.ctl.BHImageTestCase"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"adobe.ctl.BHImageTestCase" -framework "XCTest"
-PODS_ROOT = ${SRCROOT}/Pods
