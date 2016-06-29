@@ -1,0 +1,703 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3634C0F11CB2F00C00298E7E /* fbaLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3634C0EF1CB2F00C00298E7E /* fbaLib.cpp */; };
+		3695BBA01CB2BDF300A6AC41 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3695BB9E1CB2BDF300A6AC41 /* Info.plist */; };
+		3695BBA11CB2BDF300A6AC41 /* PerfHarnessUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3695BB9F1CB2BDF300A6AC41 /* PerfHarnessUnitTests.m */; };
+		4B048F36386F631C213B444E /* libPods-PerfHarnessUnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 510BCAB64B373A52CDA82498 /* libPods-PerfHarnessUnitTests.a */; };
+		606C65825E351E8518F97489 /* libPods-PerfHarness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8FCA03D42DAECE1090E2A1 /* libPods-PerfHarness.a */; };
+		B8B8D26B1CA9C39E00B46533 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D2681CA9C39E00B46533 /* CoreGraphics.framework */; };
+		B8B8D26C1CA9C39E00B46533 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D2691CA9C39E00B46533 /* libc++.tbd */; };
+		B8B8D26D1CA9C39E00B46533 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D26A1CA9C39E00B46533 /* UIKit.framework */; };
+		B8B8D2731CA9C59100B46533 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = B8B8D2701CA9C59100B46533 /* UIImage+OpenCV.mm */; };
+		B8B8D2741CA9C59100B46533 /* UIImage+Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8D2721CA9C59100B46533 /* UIImage+Transform.m */; };
+		B8B8D2771CA9C63C00B46533 /* puppy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8B8D2761CA9C63C00B46533 /* puppy.jpg */; };
+		B8CE6E281CA9A9C7006D8D23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E271CA9A9C7006D8D23 /* main.m */; };
+		B8CE6E2B1CA9A9C7006D8D23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E2A1CA9A9C7006D8D23 /* AppDelegate.m */; };
+		B8CE6E2E1CA9A9C7006D8D23 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E2D1CA9A9C7006D8D23 /* ViewController.m */; };
+		B8CE6E311CA9A9C7006D8D23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8CE6E2F1CA9A9C7006D8D23 /* Main.storyboard */; };
+		B8CE6E331CA9A9C7006D8D23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8CE6E321CA9A9C7006D8D23 /* Assets.xcassets */; };
+		B8CE6E361CA9A9C7006D8D23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8CE6E341CA9A9C7006D8D23 /* LaunchScreen.storyboard */; };
+		B8CE6E411CA9AA7B006D8D23 /* PERFImagingFunction.mm in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E401CA9AA7B006D8D23 /* PERFImagingFunction.mm */; };
+		B8CE6E451CA9AD54006D8D23 /* ImagingFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E441CA9AD54006D8D23 /* ImagingFunc.cpp */; };
+		B8E5D2311CAB495700D9B3BC /* REG_001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D22C1CAB495700D9B3BC /* REG_001.jpg */; };
+		B8E5D2321CAB495700D9B3BC /* REG_002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D22D1CAB495700D9B3BC /* REG_002.jpg */; };
+		B8E5D2331CAB495700D9B3BC /* REG_003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D22E1CAB495700D9B3BC /* REG_003.jpg */; };
+		B8E5D2341CAB495700D9B3BC /* REG_004.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D22F1CAB495700D9B3BC /* REG_004.jpg */; };
+		B8E5D2351CAB495700D9B3BC /* REG_005.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D2301CAB495700D9B3BC /* REG_005.jpg */; };
+		B8E5D2381CAB5B3800D9B3BC /* PERFTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E5D2371CAB5B3800D9B3BC /* PERFTimer.m */; };
+		B8E5D23E1CAB80BA00D9B3BC /* REG_006.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D2391CAB80BA00D9B3BC /* REG_006.jpg */; };
+		B8E5D23F1CAB80BA00D9B3BC /* REG_007.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D23A1CAB80BA00D9B3BC /* REG_007.jpg */; };
+		B8E5D2401CAB80BA00D9B3BC /* REG_008.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D23B1CAB80BA00D9B3BC /* REG_008.jpg */; };
+		B8E5D2411CAB80BA00D9B3BC /* REG_009.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D23C1CAB80BA00D9B3BC /* REG_009.jpg */; };
+		B8E5D2421CAB80BA00D9B3BC /* REG_010.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E5D23D1CAB80BA00D9B3BC /* REG_010.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36B4EBA21CB2AF06000B432D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8CE6E1B1CA9A9C6006D8D23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8CE6E221CA9A9C6006D8D23;
+			remoteInfo = PerfHarness;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B772B232733CC5B3E945A7D /* Pods-PerfHarnessUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfHarnessUnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PerfHarnessUnitTests/Pods-PerfHarnessUnitTests.release.xcconfig"; sourceTree = "<group>"; };
+		2C8FCA03D42DAECE1090E2A1 /* libPods-PerfHarness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PerfHarness.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3634C0EF1CB2F00C00298E7E /* fbaLib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fbaLib.cpp; sourceTree = "<group>"; };
+		3634C0F01CB2F00C00298E7E /* fbaLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fbaLib.h; sourceTree = "<group>"; };
+		3695BB9E1CB2BDF300A6AC41 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3695BB9F1CB2BDF300A6AC41 /* PerfHarnessUnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerfHarnessUnitTests.m; sourceTree = "<group>"; };
+		36B4EB9D1CB2AF06000B432D /* PerfHarnessUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerfHarnessUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BDA77B0904EF13C0881F8E0 /* Pods-PerfHarness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfHarness.release.xcconfig"; path = "Pods/Target Support Files/Pods-PerfHarness/Pods-PerfHarness.release.xcconfig"; sourceTree = "<group>"; };
+		510BCAB64B373A52CDA82498 /* libPods-PerfHarnessUnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PerfHarnessUnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		545CBB98C31B90CF9FC29466 /* Pods-PerfHarness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfHarness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PerfHarness/Pods-PerfHarness.debug.xcconfig"; sourceTree = "<group>"; };
+		B87149B81CA9D11000B6F5D3 /* fbaLib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fbaLib.cpp; sourceTree = "<group>"; };
+		B87149B91CA9D11000B6F5D3 /* fbaLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fbaLib.h; sourceTree = "<group>"; };
+		B8B8D2681CA9C39E00B46533 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B8B8D2691CA9C39E00B46533 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B8B8D26A1CA9C39E00B46533 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B8B8D26F1CA9C59100B46533 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		B8B8D2701CA9C59100B46533 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		B8B8D2711CA9C59100B46533 /* UIImage+Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Transform.h"; sourceTree = "<group>"; };
+		B8B8D2721CA9C59100B46533 /* UIImage+Transform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Transform.m"; sourceTree = "<group>"; };
+		B8B8D2761CA9C63C00B46533 /* puppy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = puppy.jpg; sourceTree = "<group>"; };
+		B8CE6E231CA9A9C6006D8D23 /* PerfHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8CE6E271CA9A9C7006D8D23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B8CE6E291CA9A9C7006D8D23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B8CE6E2A1CA9A9C7006D8D23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B8CE6E2C1CA9A9C7006D8D23 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B8CE6E2D1CA9A9C7006D8D23 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B8CE6E301CA9A9C7006D8D23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B8CE6E321CA9A9C7006D8D23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8CE6E351CA9A9C7006D8D23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8CE6E371CA9A9C7006D8D23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8CE6E3F1CA9AA7B006D8D23 /* PERFImagingFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PERFImagingFunction.h; sourceTree = "<group>"; };
+		B8CE6E401CA9AA7B006D8D23 /* PERFImagingFunction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PERFImagingFunction.mm; sourceTree = "<group>"; };
+		B8CE6E431CA9AD44006D8D23 /* ImagingFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagingFunc.h; sourceTree = "<group>"; };
+		B8CE6E441CA9AD54006D8D23 /* ImagingFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImagingFunc.cpp; sourceTree = "<group>"; };
+		B8E5D22C1CAB495700D9B3BC /* REG_001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_001.jpg; sourceTree = "<group>"; };
+		B8E5D22D1CAB495700D9B3BC /* REG_002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_002.jpg; sourceTree = "<group>"; };
+		B8E5D22E1CAB495700D9B3BC /* REG_003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_003.jpg; sourceTree = "<group>"; };
+		B8E5D22F1CAB495700D9B3BC /* REG_004.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_004.jpg; sourceTree = "<group>"; };
+		B8E5D2301CAB495700D9B3BC /* REG_005.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_005.jpg; sourceTree = "<group>"; };
+		B8E5D2361CAB5B3800D9B3BC /* PERFTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PERFTimer.h; sourceTree = "<group>"; };
+		B8E5D2371CAB5B3800D9B3BC /* PERFTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PERFTimer.m; sourceTree = "<group>"; };
+		B8E5D2391CAB80BA00D9B3BC /* REG_006.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_006.jpg; sourceTree = "<group>"; };
+		B8E5D23A1CAB80BA00D9B3BC /* REG_007.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_007.jpg; sourceTree = "<group>"; };
+		B8E5D23B1CAB80BA00D9B3BC /* REG_008.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_008.jpg; sourceTree = "<group>"; };
+		B8E5D23C1CAB80BA00D9B3BC /* REG_009.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_009.jpg; sourceTree = "<group>"; };
+		B8E5D23D1CAB80BA00D9B3BC /* REG_010.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = REG_010.jpg; sourceTree = "<group>"; };
+		C03AC50F813BEBFAC7AAF013 /* Pods-PerfHarnessUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfHarnessUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PerfHarnessUnitTests/Pods-PerfHarnessUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36B4EB9A1CB2AF06000B432D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B048F36386F631C213B444E /* libPods-PerfHarnessUnitTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8CE6E201CA9A9C6006D8D23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8B8D26B1CA9C39E00B46533 /* CoreGraphics.framework in Frameworks */,
+				B8B8D26C1CA9C39E00B46533 /* libc++.tbd in Frameworks */,
+				B8B8D26D1CA9C39E00B46533 /* UIKit.framework in Frameworks */,
+				606C65825E351E8518F97489 /* libPods-PerfHarness.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3634C0EE1CB2F00C00298E7E /* fbaLib */ = {
+			isa = PBXGroup;
+			children = (
+				3634C0EF1CB2F00C00298E7E /* fbaLib.cpp */,
+				3634C0F01CB2F00C00298E7E /* fbaLib.h */,
+			);
+			path = fbaLib;
+			sourceTree = "<group>";
+		};
+		36B4EB9E1CB2AF06000B432D /* PerfHarnessUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				3695BB9E1CB2BDF300A6AC41 /* Info.plist */,
+				3695BB9F1CB2BDF300A6AC41 /* PerfHarnessUnitTests.m */,
+			);
+			path = PerfHarnessUnitTests;
+			sourceTree = "<group>";
+		};
+		91A4212EEBA394A696B3907D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8B8D2681CA9C39E00B46533 /* CoreGraphics.framework */,
+				B8B8D2691CA9C39E00B46533 /* libc++.tbd */,
+				B8B8D26A1CA9C39E00B46533 /* UIKit.framework */,
+				2C8FCA03D42DAECE1090E2A1 /* libPods-PerfHarness.a */,
+				510BCAB64B373A52CDA82498 /* libPods-PerfHarnessUnitTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8B8D26E1CA9C59100B46533 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B8B8D26F1CA9C59100B46533 /* UIImage+OpenCV.h */,
+				B8B8D2701CA9C59100B46533 /* UIImage+OpenCV.mm */,
+				B8B8D2711CA9C59100B46533 /* UIImage+Transform.h */,
+				B8B8D2721CA9C59100B46533 /* UIImage+Transform.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		B8B8D2751CA9C5A100B46533 /* TestImages */ = {
+			isa = PBXGroup;
+			children = (
+				B8E5D2391CAB80BA00D9B3BC /* REG_006.jpg */,
+				B8E5D23A1CAB80BA00D9B3BC /* REG_007.jpg */,
+				B8E5D23B1CAB80BA00D9B3BC /* REG_008.jpg */,
+				B8E5D23C1CAB80BA00D9B3BC /* REG_009.jpg */,
+				B8E5D23D1CAB80BA00D9B3BC /* REG_010.jpg */,
+				B8E5D22C1CAB495700D9B3BC /* REG_001.jpg */,
+				B8E5D22D1CAB495700D9B3BC /* REG_002.jpg */,
+				B8E5D22E1CAB495700D9B3BC /* REG_003.jpg */,
+				B8E5D22F1CAB495700D9B3BC /* REG_004.jpg */,
+				B8E5D2301CAB495700D9B3BC /* REG_005.jpg */,
+				B8B8D2761CA9C63C00B46533 /* puppy.jpg */,
+			);
+			path = TestImages;
+			sourceTree = "<group>";
+		};
+		B8CE6E1A1CA9A9C6006D8D23 = {
+			isa = PBXGroup;
+			children = (
+				3634C0EE1CB2F00C00298E7E /* fbaLib */,
+				B8CE6E251CA9A9C6006D8D23 /* PerfHarness */,
+				36B4EB9E1CB2AF06000B432D /* PerfHarnessUnitTests */,
+				B8CE6E241CA9A9C6006D8D23 /* Products */,
+				91A4212EEBA394A696B3907D /* Frameworks */,
+				C035EF120D08A8CCDB87C799 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		B8CE6E241CA9A9C6006D8D23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8CE6E231CA9A9C6006D8D23 /* PerfHarness.app */,
+				36B4EB9D1CB2AF06000B432D /* PerfHarnessUnitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8CE6E251CA9A9C6006D8D23 /* PerfHarness */ = {
+			isa = PBXGroup;
+			children = (
+				B8B8D2751CA9C5A100B46533 /* TestImages */,
+				B8B8D26E1CA9C59100B46533 /* Categories */,
+				B8CE6E421CA9AD15006D8D23 /* CPPImpl */,
+				B8CE6E291CA9A9C7006D8D23 /* AppDelegate.h */,
+				B8CE6E2A1CA9A9C7006D8D23 /* AppDelegate.m */,
+				B8CE6E2C1CA9A9C7006D8D23 /* ViewController.h */,
+				B8CE6E2D1CA9A9C7006D8D23 /* ViewController.m */,
+				B8E5D2361CAB5B3800D9B3BC /* PERFTimer.h */,
+				B8E5D2371CAB5B3800D9B3BC /* PERFTimer.m */,
+				B8CE6E3F1CA9AA7B006D8D23 /* PERFImagingFunction.h */,
+				B8CE6E401CA9AA7B006D8D23 /* PERFImagingFunction.mm */,
+				B8CE6E2F1CA9A9C7006D8D23 /* Main.storyboard */,
+				B8CE6E321CA9A9C7006D8D23 /* Assets.xcassets */,
+				B8CE6E341CA9A9C7006D8D23 /* LaunchScreen.storyboard */,
+				B8CE6E371CA9A9C7006D8D23 /* Info.plist */,
+				B8CE6E261CA9A9C7006D8D23 /* Supporting Files */,
+			);
+			path = PerfHarness;
+			sourceTree = "<group>";
+		};
+		B8CE6E261CA9A9C7006D8D23 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8CE6E271CA9A9C7006D8D23 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B8CE6E421CA9AD15006D8D23 /* CPPImpl */ = {
+			isa = PBXGroup;
+			children = (
+				B87149B81CA9D11000B6F5D3 /* fbaLib.cpp */,
+				B87149B91CA9D11000B6F5D3 /* fbaLib.h */,
+				B8CE6E431CA9AD44006D8D23 /* ImagingFunc.h */,
+				B8CE6E441CA9AD54006D8D23 /* ImagingFunc.cpp */,
+			);
+			path = CPPImpl;
+			sourceTree = "<group>";
+		};
+		C035EF120D08A8CCDB87C799 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				545CBB98C31B90CF9FC29466 /* Pods-PerfHarness.debug.xcconfig */,
+				4BDA77B0904EF13C0881F8E0 /* Pods-PerfHarness.release.xcconfig */,
+				C03AC50F813BEBFAC7AAF013 /* Pods-PerfHarnessUnitTests.debug.xcconfig */,
+				1B772B232733CC5B3E945A7D /* Pods-PerfHarnessUnitTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36B4EB9C1CB2AF06000B432D /* PerfHarnessUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36B4EBA61CB2AF06000B432D /* Build configuration list for PBXNativeTarget "PerfHarnessUnitTests" */;
+			buildPhases = (
+				76125C8EA5EC2779529FFB79 /* 📦 Check Pods Manifest.lock */,
+				36B4EB991CB2AF06000B432D /* Sources */,
+				36B4EB9A1CB2AF06000B432D /* Frameworks */,
+				36B4EB9B1CB2AF06000B432D /* Resources */,
+				2D0EF8181AE7840FA27E063C /* 📦 Embed Pods Frameworks */,
+				02505C91BF8725394B6602E3 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36B4EBA31CB2AF06000B432D /* PBXTargetDependency */,
+			);
+			name = PerfHarnessUnitTests;
+			productName = PerfHarnessUnitTests;
+			productReference = 36B4EB9D1CB2AF06000B432D /* PerfHarnessUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B8CE6E221CA9A9C6006D8D23 /* PerfHarness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8CE6E3A1CA9A9C7006D8D23 /* Build configuration list for PBXNativeTarget "PerfHarness" */;
+			buildPhases = (
+				E593D3CC1D17FA226A6F18BB /* 📦 Check Pods Manifest.lock */,
+				B8CE6E1F1CA9A9C6006D8D23 /* Sources */,
+				B8CE6E201CA9A9C6006D8D23 /* Frameworks */,
+				B8CE6E211CA9A9C6006D8D23 /* Resources */,
+				4576EB152577C8AA19F1E66F /* 📦 Embed Pods Frameworks */,
+				146CF1454C814C7C5D6CAB6B /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerfHarness;
+			productName = PerfHarness;
+			productReference = B8CE6E231CA9A9C6006D8D23 /* PerfHarness.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8CE6E1B1CA9A9C6006D8D23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Adobe Labs";
+				TargetAttributes = {
+					36B4EB9C1CB2AF06000B432D = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = M5MDYTPX4P;
+						TestTargetID = B8CE6E221CA9A9C6006D8D23;
+					};
+					B8CE6E221CA9A9C6006D8D23 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = B8CE6E1E1CA9A9C6006D8D23 /* Build configuration list for PBXProject "PerfHarness" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8CE6E1A1CA9A9C6006D8D23;
+			productRefGroup = B8CE6E241CA9A9C6006D8D23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8CE6E221CA9A9C6006D8D23 /* PerfHarness */,
+				36B4EB9C1CB2AF06000B432D /* PerfHarnessUnitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36B4EB9B1CB2AF06000B432D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3695BBA01CB2BDF300A6AC41 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8CE6E211CA9A9C6006D8D23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8CE6E361CA9A9C7006D8D23 /* LaunchScreen.storyboard in Resources */,
+				B8CE6E331CA9A9C7006D8D23 /* Assets.xcassets in Resources */,
+				B8B8D2771CA9C63C00B46533 /* puppy.jpg in Resources */,
+				B8E5D2401CAB80BA00D9B3BC /* REG_008.jpg in Resources */,
+				B8E5D23F1CAB80BA00D9B3BC /* REG_007.jpg in Resources */,
+				B8E5D2341CAB495700D9B3BC /* REG_004.jpg in Resources */,
+				B8E5D2321CAB495700D9B3BC /* REG_002.jpg in Resources */,
+				B8CE6E311CA9A9C7006D8D23 /* Main.storyboard in Resources */,
+				B8E5D2351CAB495700D9B3BC /* REG_005.jpg in Resources */,
+				B8E5D2311CAB495700D9B3BC /* REG_001.jpg in Resources */,
+				B8E5D2411CAB80BA00D9B3BC /* REG_009.jpg in Resources */,
+				B8E5D2331CAB495700D9B3BC /* REG_003.jpg in Resources */,
+				B8E5D2421CAB80BA00D9B3BC /* REG_010.jpg in Resources */,
+				B8E5D23E1CAB80BA00D9B3BC /* REG_006.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02505C91BF8725394B6602E3 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PerfHarnessUnitTests/Pods-PerfHarnessUnitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		146CF1454C814C7C5D6CAB6B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PerfHarness/Pods-PerfHarness-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D0EF8181AE7840FA27E063C /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PerfHarnessUnitTests/Pods-PerfHarnessUnitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4576EB152577C8AA19F1E66F /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PerfHarness/Pods-PerfHarness-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76125C8EA5EC2779529FFB79 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E593D3CC1D17FA226A6F18BB /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36B4EB991CB2AF06000B432D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3695BBA11CB2BDF300A6AC41 /* PerfHarnessUnitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8CE6E1F1CA9A9C6006D8D23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8CE6E2E1CA9A9C7006D8D23 /* ViewController.m in Sources */,
+				B8E5D2381CAB5B3800D9B3BC /* PERFTimer.m in Sources */,
+				B8CE6E2B1CA9A9C7006D8D23 /* AppDelegate.m in Sources */,
+				B8CE6E281CA9A9C7006D8D23 /* main.m in Sources */,
+				B8CE6E411CA9AA7B006D8D23 /* PERFImagingFunction.mm in Sources */,
+				B8B8D2741CA9C59100B46533 /* UIImage+Transform.m in Sources */,
+				3634C0F11CB2F00C00298E7E /* fbaLib.cpp in Sources */,
+				B8B8D2731CA9C59100B46533 /* UIImage+OpenCV.mm in Sources */,
+				B8CE6E451CA9AD54006D8D23 /* ImagingFunc.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36B4EBA31CB2AF06000B432D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8CE6E221CA9A9C6006D8D23 /* PerfHarness */;
+			targetProxy = 36B4EBA21CB2AF06000B432D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B8CE6E2F1CA9A9C7006D8D23 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8CE6E301CA9A9C7006D8D23 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B8CE6E341CA9A9C7006D8D23 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8CE6E351CA9A9C7006D8D23 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		36B4EBA41CB2AF06000B432D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C03AC50F813BEBFAC7AAF013 /* Pods-PerfHarnessUnitTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"BH_REFERENCE_IMAGE_DIR=\"\\\"$(SOURCE_ROOT)/$(PROJECT_NAME)UnitTests/ReferenceImages\\\"\"",
+				);
+				INFOPLIST_FILE = PerfHarnessUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.testbenchsearch.PerfHarnessUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerfHarness.app/PerfHarness";
+			};
+			name = Debug;
+		};
+		36B4EBA51CB2AF06000B432D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B772B232733CC5B3E945A7D /* Pods-PerfHarnessUnitTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"BH_REFERENCE_IMAGE_DIR=\"\\\"$(SOURCE_ROOT)/$(PROJECT_NAME)UnitTests/ReferenceImages\\\"\"",
+				);
+				INFOPLIST_FILE = PerfHarnessUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.testbenchsearch.PerfHarnessUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerfHarness.app/PerfHarness";
+			};
+			name = Release;
+		};
+		B8CE6E381CA9A9C7006D8D23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8CE6E391CA9A9C7006D8D23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8CE6E3B1CA9A9C7006D8D23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 545CBB98C31B90CF9FC29466 /* Pods-PerfHarness.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PerfHarness/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.labs.PerfHarness;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B8CE6E3C1CA9A9C7006D8D23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BDA77B0904EF13C0881F8E0 /* Pods-PerfHarness.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PerfHarness/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.labs.PerfHarness;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36B4EBA61CB2AF06000B432D /* Build configuration list for PBXNativeTarget "PerfHarnessUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36B4EBA41CB2AF06000B432D /* Debug */,
+				36B4EBA51CB2AF06000B432D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8CE6E1E1CA9A9C6006D8D23 /* Build configuration list for PBXProject "PerfHarness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8CE6E381CA9A9C7006D8D23 /* Debug */,
+				B8CE6E391CA9A9C7006D8D23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8CE6E3A1CA9A9C7006D8D23 /* Build configuration list for PBXNativeTarget "PerfHarness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8CE6E3B1CA9A9C7006D8D23 /* Debug */,
+				B8CE6E3C1CA9A9C7006D8D23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B8CE6E1B1CA9A9C6006D8D23 /* Project object */;
+}
