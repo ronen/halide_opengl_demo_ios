@@ -18,6 +18,16 @@
 		B8B8D26C1CA9C39E00B46533 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D2691CA9C39E00B46533 /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		365A02671D25970100E80429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8CE6E1B1CA9A9C6006D8D23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 365A02631D2596CF00E80429;
+			remoteInfo = "sample-filter-ios-cpu";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		365A02561D25954F00E80429 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		365A02571D25954F00E80429 /* doit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = doit.cpp; sourceTree = "<group>"; };
@@ -81,6 +91,23 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		365A02631D2596CF00E80429 /* sample_filter_cpu.o */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--always-make $(CONFIGURATION_BUILD_DIR)/build/$(PRODUCT_NAME) BUILD_DIR=$(CONFIGURATION_BUILD_DIR)/build TARGET_HOST=arm-64-ios";
+			buildConfigurationList = 365A02641D2596CF00E80429 /* Build configuration list for PBXLegacyTarget "sample_filter_cpu.o" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "$(PROJECT_DIR)";
+			dependencies = (
+			);
+			name = sample_filter_cpu.o;
+			passBuildSettingsInEnvironment = 0;
+			productName = "sample-filter-ios-cpu";
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		B8CE6E221CA9A9C6006D8D23 /* opengl_demo */ = {
 			isa = PBXNativeTarget;
@@ -93,6 +120,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				365A02681D25970100E80429 /* PBXTargetDependency */,
 			);
 			name = opengl_demo;
 			productName = opengl_demo;
@@ -108,6 +136,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Adobe Labs";
 				TargetAttributes = {
+					365A02631D2596CF00E80429 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = M5MDYTPX4P;
+					};
 					B8CE6E221CA9A9C6006D8D23 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = M5MDYTPX4P;
@@ -128,6 +160,7 @@
 			projectRoot = "";
 			targets = (
 				B8CE6E221CA9A9C6006D8D23 /* opengl_demo */,
+				365A02631D2596CF00E80429 /* sample_filter_cpu.o */,
 			);
 		};
 /* End PBXProject section */
@@ -158,6 +191,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		365A02681D25970100E80429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 365A02631D2596CF00E80429 /* sample_filter_cpu.o */;
+			targetProxy = 365A02671D25970100E80429 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		365A02601D25962800E80429 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -170,6 +211,29 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		365A02651D2596CF00E80429 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		365A02661D2596CF00E80429 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		B8CE6E381CA9A9C7006D8D23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -207,9 +271,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /Users/Ronen/github/Halide/include/;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(CONFIGURATION_BUILD_DIR)/build/sample_filter_cpu.o";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -246,8 +312,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /Users/Ronen/github/Halide/include/;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(CONFIGURATION_BUILD_DIR)/build/sample_filter_cpu.o";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -262,6 +330,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/Ronen/github/Halide/include/,
+					"$(CONFIGURATION_BUILD_DIR)",
+				);
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -279,6 +351,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/Ronen/github/Halide/include/,
+					"$(CONFIGURATION_BUILD_DIR)",
+				);
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -291,6 +367,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		365A02641D2596CF00E80429 /* Build configuration list for PBXLegacyTarget "sample_filter_cpu.o" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				365A02651D2596CF00E80429 /* Debug */,
+				365A02661D2596CF00E80429 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		B8CE6E1E1CA9A9C6006D8D23 /* Build configuration list for PBXProject "opengl_demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
