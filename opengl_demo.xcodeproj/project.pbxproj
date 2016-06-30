@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		367A4F641D24655A006581CC /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367A4F631D24655A006581CC /* GLKit.framework */; };
+		367A4F661D246563006581CC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367A4F651D246563006581CC /* OpenGLES.framework */; };
 		B8B8D26C1CA9C39E00B46533 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D2691CA9C39E00B46533 /* libc++.tbd */; };
 		B8B8D2771CA9C63C00B46533 /* puppy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8B8D2761CA9C63C00B46533 /* puppy.jpg */; };
 		B8CE6E281CA9A9C7006D8D23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E271CA9A9C7006D8D23 /* main.m */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		367A4F631D24655A006581CC /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		367A4F651D246563006581CC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		B8B8D2691CA9C39E00B46533 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		B8B8D2761CA9C63C00B46533 /* puppy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = puppy.jpg; sourceTree = "<group>"; };
 		B8CE6E231CA9A9C6006D8D23 /* opengl_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = opengl_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				367A4F661D246563006581CC /* OpenGLES.framework in Frameworks */,
+				367A4F641D24655A006581CC /* GLKit.framework in Frameworks */,
 				B8B8D26C1CA9C39E00B46533 /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +59,8 @@
 		91A4212EEBA394A696B3907D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				367A4F651D246563006581CC /* OpenGLES.framework */,
+				367A4F631D24655A006581CC /* GLKit.framework */,
 				B8B8D2691CA9C39E00B46533 /* libc++.tbd */,
 			);
 			name = Frameworks;
@@ -301,7 +309,7 @@
 				INFOPLIST_FILE = opengl_demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.labs.opengl-demo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adobe.labs.opengl-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -318,7 +326,7 @@
 				INFOPLIST_FILE = opengl_demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.labs.opengl-demo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adobe.labs.opengl-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
