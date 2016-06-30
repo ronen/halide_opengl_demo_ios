@@ -82,7 +82,7 @@ static std::string run_opengl_filter_from_host_to_host(const uint8_t *image_data
     sample_filter_opengl(&input_buf, &output_buf);
     halide_copy_to_host(nullptr, &output_buf); // Ensure that halide copies the data back to the host
 
-    return "OpenGL host-to-host"; // Timer::report(time);
+    return Timer::report(time);
 }
 
 /*
@@ -118,6 +118,15 @@ static std::string run_opengl_filter_from_texture_to_texture(GLuint input_textur
 
 
 namespace OpenGLHelpers {
+
+    static void check_error(const char *where)
+    {
+        GLenum err = glGetError();
+        if (err != GL_NO_ERROR) {
+            fprintf(stderr,  "*************** OpenGL error %#x at %s\n", err, where);
+            exit(1);
+        }
+    }
 
     static GLuint compileShader(const char *shaderString, GLenum shaderType)
     {
@@ -188,15 +197,24 @@ namespace OpenGLHelpers {
 
     GLuint create_texture(int width, int height, const uint8_t *data)
     {
+        OpenGLHelpers::check_error("starting create_texture");
         GLuint texture_id;
-        glEnable(GL_TEXTURE_2D);
+        // glEnable(GL_TEXTURE_2D);
+        OpenGLHelpers::check_error("A");
         glGenTextures(1, &texture_id);
+        OpenGLHelpers::check_error("B");
         glBindTexture(GL_TEXTURE_2D, texture_id);
+        OpenGLHelpers::check_error("C");
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+        OpenGLHelpers::check_error("D");
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+        OpenGLHelpers::check_error("E");
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        OpenGLHelpers::check_error("F");
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+        OpenGLHelpers::check_error("G");
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+        OpenGLHelpers::check_error("finished create_texture");
         return texture_id;
     }
 
@@ -240,6 +258,8 @@ namespace OpenGLHelpers {
         glActiveTexture(GL_TEXTURE0); 
         glUniform1i(program.textureUniform, 0);
         glDrawElements(GL_TRIANGLES, sizeof(Indices)/sizeof(Indices[0]), GL_UNSIGNED_BYTE, 0);
+
+        OpenGLHelpers::check_error("finished display_texture");
     }
 }
 
@@ -271,9 +291,15 @@ extern "C" void doit(const uint8_t *image_data, int width, int height)
 {
     std::string report;
 
+    OpenGLHelpers::check_error("start");
+
     OpenGLHelpers::setup_program();
 
+    OpenGLHelpers::check_error("after setup_program");
+
     Layout::draw_image(Layout::UL, image_data, width, height, "Input");
+
+    OpenGLHelpers::check_error("after draw Input");
 
     /*
      * Draw the result of running the filter on the CPU
@@ -283,16 +309,16 @@ extern "C" void doit(const uint8_t *image_data, int width, int height)
     Layout::draw_image(Layout::UR, cpu_result_data, width, height, report);
     free((void*) cpu_result_data);
 
-#if 0
+    OpenGLHelpers::check_error("after draw CPU");
+
     /*
      * Draw the result of running the filter on OpenGL, with data starting
      * from and ending up on the host
      */
     const auto opengl_result_data = (uint8_t *) calloc(width * height * 4, sizeof(uint8_t));
     report = run_opengl_filter_from_host_to_host(image_data, opengl_result_data, width, height);
-    Layout::draw_image(Layout::LL, opengl_result_data, width, height, report);
+    Layout::draw_image(Layout::LL, image_data, width, height, report);
     free((void*) opengl_result_data);
-#endif
 
     /*
      * Draw the result of running the filter on OpenGL, with data starting
@@ -300,6 +326,7 @@ extern "C" void doit(const uint8_t *image_data, int width, int height)
      */
     const auto image_texture_id = OpenGLHelpers::create_texture(width, height, image_data);
     const auto result_texture_id = OpenGLHelpers::create_texture(width, height, nullptr);
+
     report = run_opengl_filter_from_texture_to_texture(image_texture_id, result_texture_id, width, height);
     Layout::draw_texture(Layout::LR, result_texture_id, width, height, report);
     OpenGLHelpers::delete_texture(image_texture_id);

@@ -104,7 +104,7 @@
 /* Begin PBXLegacyTarget section */
 		365A02631D2596CF00E80429 /* sample_filter_cpu.o */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "--always-make $(CONFIGURATION_BUILD_DIR)/build/$(PRODUCT_NAME) BUILD_DIR=$(CONFIGURATION_BUILD_DIR)/build TARGET_HOST=arm-64-ios";
+			buildArgumentsString = "--always-make $(CONFIGURATION_BUILD_DIR)/build/$(PRODUCT_NAME) BUILD_DIR=$(CONFIGURATION_BUILD_DIR)/build TARGET_HOST=arm-64-ios-armv7s";
 			buildConfigurationList = 365A02641D2596CF00E80429 /* Build configuration list for PBXLegacyTarget "sample_filter_cpu.o" */;
 			buildPhases = (
 			);
@@ -118,7 +118,7 @@
 		};
 		365A02691D25A8FF00E80429 /* sample_filter_opengl.o */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "--always-make $(CONFIGURATION_BUILD_DIR)/build/$(PRODUCT_NAME) BUILD_DIR=$(CONFIGURATION_BUILD_DIR)/build TARGET_HOST=arm-64-ios-opengl";
+			buildArgumentsString = "--always-make $(CONFIGURATION_BUILD_DIR)/build/$(PRODUCT_NAME) BUILD_DIR=$(CONFIGURATION_BUILD_DIR)/build TARGET_HOST=arm-64-ios-armv7s";
 			buildConfigurationList = 365A026A1D25A8FF00E80429 /* Build configuration list for PBXLegacyTarget "sample_filter_opengl.o" */;
 			buildPhases = (
 			);
