@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		367A4F641D24655A006581CC /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367A4F631D24655A006581CC /* GLKit.framework */; };
 		367A4F661D246563006581CC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367A4F651D246563006581CC /* OpenGLES.framework */; };
+		367A4F681D25762B006581CC /* doit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 367A4F671D25762B006581CC /* doit.cpp */; };
 		B8B8D26C1CA9C39E00B46533 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B8D2691CA9C39E00B46533 /* libc++.tbd */; };
 		B8B8D2771CA9C63C00B46533 /* puppy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8B8D2761CA9C63C00B46533 /* puppy.jpg */; };
 		B8CE6E281CA9A9C7006D8D23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6E271CA9A9C7006D8D23 /* main.m */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		367A4F631D24655A006581CC /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		367A4F651D246563006581CC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		367A4F671D25762B006581CC /* doit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = doit.cpp; path = opengl_demo/doit.cpp; sourceTree = "<group>"; };
 		B8B8D2691CA9C39E00B46533 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		B8B8D2761CA9C63C00B46533 /* puppy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = puppy.jpg; sourceTree = "<group>"; };
 		B8CE6E231CA9A9C6006D8D23 /* opengl_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = opengl_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +89,7 @@
 		B8CE6E1A1CA9A9C6006D8D23 = {
 			isa = PBXGroup;
 			children = (
+				367A4F671D25762B006581CC /* doit.cpp */,
 				B8CE6E251CA9A9C6006D8D23 /* opengl_demo */,
 				B8CE6E241CA9A9C6006D8D23 /* Products */,
 				91A4212EEBA394A696B3907D /* Frameworks */,
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				367A4F681D25762B006581CC /* doit.cpp in Sources */,
 				B8CE6E2E1CA9A9C7006D8D23 /* ViewController.m in Sources */,
 				B8CE6E2B1CA9A9C7006D8D23 /* AppDelegate.m in Sources */,
 				B8CE6E281CA9A9C7006D8D23 /* main.m in Sources */,
