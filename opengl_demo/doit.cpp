@@ -20,13 +20,7 @@ static GLuint compileShader(const char *shaderString, GLenum shaderType)
     return shaderHandle;
 }
 
-
-extern "C" void doit(
-        const uint8_t *image_data,
-        int image_width,
-        int image_height,
-        int window_width,
-        int window_height)
+extern "C" void doit(const uint8_t *image_data, int image_width, int image_height)
 {
     glClearColor(1.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
@@ -107,8 +101,6 @@ extern "C" void doit(
     glEnableVertexAttribArray(positionSlot);
     glEnableVertexAttribArray(texCoordSlot);
 
-    glViewport(0, 0, window_width, window_height);
- 
     glVertexAttribPointer(positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
     glVertexAttribPointer(texCoordSlot, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*) (sizeof(float) * 3));
     glBindTexture(GL_TEXTURE_2D, texture_id);

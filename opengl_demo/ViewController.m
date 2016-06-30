@@ -61,8 +61,7 @@
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
-    doit(self.image_data, self.image_width, self.image_height,
-            self.glk_view.frame.size.width, self.glk_view.frame.size.height);
+    doit(self.image_data, self.image_width, self.image_height);
 }
 
 - (IBAction)runButtonPressed:(id)sender {
