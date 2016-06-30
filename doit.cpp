@@ -122,6 +122,7 @@ namespace OpenGLHelpers {
         program.texCoordSlot = texCoordSlot;
         program.textureUniform = textureUniform;
     }
+
     GLuint create_texture(int width, int height, const uint8_t *data)
     {
         GLuint texture_id;
@@ -135,6 +136,12 @@ namespace OpenGLHelpers {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
         return texture_id;
     }
+
+    void delete_texture(GLuint texture_id)
+    {
+        glDeleteTextures(1, &texture_id);
+    }
+
 
     void display_texture(GLuint texture_id, float x0, float x1, float y0, float y1)
     {
@@ -173,58 +180,44 @@ namespace OpenGLHelpers {
     }
 }
 
-#if 0
 namespace Layout {
     enum location { UL, UR, LL, LR };
 
-    void Layout::draw_texture(enum location location, GLuint texture_id, int width, int height, const std::string &label)
+    void draw_texture(enum location location, GLuint texture_id, int width, int height, const std::string &label)
     {
-        int x0, x1, y0, y1, lx, ly;
-        switch (location) { // set X coords
-            case LL:
-            case UL:
-                x0 = border_sz;             x1 = x0 + width;
-                lx = x0 + 2;
-                break;
-            case LR:
-            case UR:
-                x1 = state.window_width - border_sz;        x0 = x1 - width;
-                lx = x0 + 2;
-                break;
+        int x0, y0;
+        switch (location) {
+            case LL: x0 = -1; y0 = -1; break;
+            case UL: x0 = -1; y0 =  0; break;
+            case LR: x0 =  0; y0 = -1; break;
+            case UR: x0 =  0; y0 =  0; break;
         }
-        switch (location) { // set Y coords
-            case LL:
-            case LR:
-                y0 = header_sz;             y1 = y0 + height;
-                ly = 6;
-                break;
-            case UL:
-            case UR:
-                y1 = state.window_height - header_sz;        y0 = y1 - height;
-                ly = y1 + 6;
-                break;
-        }
-        OpenGLHelpers::display_texture(texture_id, 2.0*x0/state.window_width-1.0, 2.0*x1/state.window_width-1.0, 2.0*y0/state.window_height-1.0, 2.0*y1/state.window_height-1.0);
+        OpenGLHelpers::display_texture(texture_id, x0, x0+1, y0, y0+1);
+    }
+
+    void draw_image(enum location location, const uint8_t *data, int width, int height, const std::string &label)
+    {
+        const auto texture_id = OpenGLHelpers::create_texture(width, height, data);
+        draw_texture(location, texture_id, width, height, label);
+        OpenGLHelpers::delete_texture(texture_id);
     }
 }
-#endif
 
 
 extern "C" void doit(const uint8_t *image_data, int image_width, int image_height)
 {
     std::string report;
 
-    const auto cpu_result_data = (uint8_t *) calloc(image_width * image_height * 4, sizeof(uint8_t));
-    report = run_cpu_filter(image_data, cpu_result_data, image_width, image_height);
-
     OpenGLHelpers::setup_program();
 
     glClearColor(1.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
 
-    GLuint image_texture_id = OpenGLHelpers::create_texture(image_width, image_height, image_data);
-    GLuint cpu_result_texture_id = OpenGLHelpers::create_texture(image_width, image_height, cpu_result_data);
+    Layout::draw_image(Layout::UL, image_data, image_width, image_height, "Input");
 
-    OpenGLHelpers::display_texture(image_texture_id, -1, 0, 0, 1);
+    const auto cpu_result_data = (uint8_t *) calloc(image_width * image_height * 4, sizeof(uint8_t));
+    report = run_cpu_filter(image_data, cpu_result_data, image_width, image_height);
+    Layout::draw_image(Layout::UR, cpu_result_data, image_width, image_height, "CPU");
+
     OpenGLHelpers::display_texture(cpu_result_texture_id, 0, 1, 0, 1);
 }
