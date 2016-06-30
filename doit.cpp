@@ -71,6 +71,145 @@ static GLuint compileShader(const char *shaderString, GLenum shaderType)
     return shaderHandle;
 }
 
+
+namespace OpenGLHelpers {
+    struct program {
+        GLuint positionSlot;
+        GLuint texCoordSlot;
+        GLuint textureUniform;
+    } program;
+
+    void setup_program()
+    {
+        const char *vertexShader = " \
+                                    attribute vec4 Position;  \
+                                    attribute vec2 TexCoordIn; \
+                                    varying vec2 TexCoordOut; \
+                                    void main(void) {  \
+                                        gl_Position = Position; \
+                                            TexCoordOut = TexCoordIn; \
+                                    }";
+
+        const char *fragmentShader = " \
+                                      varying lowp vec2 TexCoordOut; \
+                                      uniform sampler2D Texture; \
+                                      void main(void) { \
+                                          gl_FragColor = texture2D(Texture, TexCoordOut); \
+                                      }";
+
+        GLuint programHandle = glCreateProgram();
+        glAttachShader(programHandle, compileShader(vertexShader, GL_VERTEX_SHADER));
+        glAttachShader(programHandle, compileShader(fragmentShader, GL_FRAGMENT_SHADER));
+        glLinkProgram(programHandle);
+
+        GLint linkSuccess;
+        glGetProgramiv(programHandle, GL_LINK_STATUS, &linkSuccess);
+        if (linkSuccess == GL_FALSE) {
+            GLchar messages[256];
+            glGetProgramInfoLog(programHandle, sizeof(messages), 0, messages);
+            fprintf(stderr, "%s\n", messages);
+            exit(1);
+        }
+
+        glUseProgram(programHandle);
+        auto positionSlot = glGetAttribLocation(programHandle, "Position");
+        auto texCoordSlot = glGetAttribLocation(programHandle, "TexCoordIn");
+        auto textureUniform = glGetUniformLocation(programHandle, "Texture");
+        glEnableVertexAttribArray(positionSlot);
+        glEnableVertexAttribArray(texCoordSlot);
+
+        program.positionSlot = positionSlot;
+        program.texCoordSlot = texCoordSlot;
+        program.textureUniform = textureUniform;
+    }
+    GLuint create_texture(int width, int height, const uint8_t *data)
+    {
+        GLuint texture_id;
+        glEnable(GL_TEXTURE_2D);
+        glGenTextures(1, &texture_id);
+        glBindTexture(GL_TEXTURE_2D, texture_id);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+        return texture_id;
+    }
+
+    void display_texture(GLuint texture_id, float x0, float x1, float y0, float y1)
+    {
+        typedef struct {
+            float Position[3];
+            float TexCoord[2]; // New
+        } Vertex;
+
+        const Vertex Vertices[] = {
+            {{x1, y0, 0}, {1, 1}},
+            {{x1, y1, 0}, {1, 0}},
+            {{x0, y1, 0}, {0, 0}},
+            {{x0, y0, 0}, {0, 1}},
+        };
+        const GLubyte Indices[] = {
+            0, 1, 2,
+            2, 3, 0
+        };
+
+        GLuint vertexBuffer;
+        glGenBuffers(1, &vertexBuffer);
+        glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(Vertices), Vertices, GL_STATIC_DRAW);
+
+        GLuint indexBuffer;
+        glGenBuffers(1, &indexBuffer);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBuffer);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(Indices), Indices, GL_STATIC_DRAW);
+
+        glVertexAttribPointer(program.positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
+        glVertexAttribPointer(program.texCoordSlot, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*) (sizeof(float) * 3));
+        glBindTexture(GL_TEXTURE_2D, texture_id);
+        glActiveTexture(GL_TEXTURE0); 
+        glUniform1i(program.textureUniform, 0);
+        glDrawElements(GL_TRIANGLES, sizeof(Indices)/sizeof(Indices[0]), GL_UNSIGNED_BYTE, 0);
+    }
+}
+
+#if 0
+namespace Layout {
+    enum location { UL, UR, LL, LR };
+
+    void Layout::draw_texture(enum location location, GLuint texture_id, int width, int height, const std::string &label)
+    {
+        int x0, x1, y0, y1, lx, ly;
+        switch (location) { // set X coords
+            case LL:
+            case UL:
+                x0 = border_sz;             x1 = x0 + width;
+                lx = x0 + 2;
+                break;
+            case LR:
+            case UR:
+                x1 = state.window_width - border_sz;        x0 = x1 - width;
+                lx = x0 + 2;
+                break;
+        }
+        switch (location) { // set Y coords
+            case LL:
+            case LR:
+                y0 = header_sz;             y1 = y0 + height;
+                ly = 6;
+                break;
+            case UL:
+            case UR:
+                y1 = state.window_height - header_sz;        y0 = y1 - height;
+                ly = y1 + 6;
+                break;
+        }
+        OpenGLHelpers::display_texture(texture_id, 2.0*x0/state.window_width-1.0, 2.0*x1/state.window_width-1.0, 2.0*y0/state.window_height-1.0, 2.0*y1/state.window_height-1.0);
+    }
+}
+#endif
+
+
 extern "C" void doit(const uint8_t *image_data, int image_width, int image_height)
 {
     std::string report;
@@ -78,90 +217,14 @@ extern "C" void doit(const uint8_t *image_data, int image_width, int image_heigh
     const auto cpu_result_data = (uint8_t *) calloc(image_width * image_height * 4, sizeof(uint8_t));
     report = run_cpu_filter(image_data, cpu_result_data, image_width, image_height);
 
+    OpenGLHelpers::setup_program();
 
     glClearColor(1.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
 
-    GLuint texture_id;
-    glEnable(GL_TEXTURE_2D);
-    glGenTextures(1, &texture_id);
-    glBindTexture(GL_TEXTURE_2D, texture_id);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image_width, image_height, 0, GL_RGBA, GL_UNSIGNED_BYTE, cpu_result_data);
+    GLuint image_texture_id = OpenGLHelpers::create_texture(image_width, image_height, image_data);
+    GLuint cpu_result_texture_id = OpenGLHelpers::create_texture(image_width, image_height, cpu_result_data);
 
-    typedef struct {
-        float Position[3];
-        float TexCoord[2]; // New
-    } Vertex;
-
-    const Vertex Vertices[] = {
-        {{1, -1, 0}, {1, 1}},
-        {{1, 1, 0}, {1, 0}},
-        {{-1, 1, 0}, {0, 0}},
-        {{-1, -1, 0}, {0, 1}},
-    };
-    const GLubyte Indices[] = {
-        0, 1, 2,
-        2, 3, 0
-    };
-
-    GLuint vertexBuffer;
-    glGenBuffers(1, &vertexBuffer);
-    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(Vertices), Vertices, GL_STATIC_DRAW);
- 
-    GLuint indexBuffer;
-    glGenBuffers(1, &indexBuffer);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBuffer);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(Indices), Indices, GL_STATIC_DRAW);
-
-
-    const char *vertexShader = " \
-                            attribute vec4 Position;  \
-                            attribute vec2 TexCoordIn; \
-                            varying vec2 TexCoordOut; \
-                            void main(void) {  \
-                                gl_Position = Position; \
-                                TexCoordOut = TexCoordIn; \
-                            }";
-
-    const char *fragmentShader = " \
-                               varying lowp vec2 TexCoordOut; \
-                               uniform sampler2D Texture; \
-                               void main(void) { \
-                                   gl_FragColor = texture2D(Texture, TexCoordOut); \
-                               }";
-
-    GLuint programHandle = glCreateProgram();
-    glAttachShader(programHandle, compileShader(vertexShader, GL_VERTEX_SHADER));
-    glAttachShader(programHandle, compileShader(fragmentShader, GL_FRAGMENT_SHADER));
-    glLinkProgram(programHandle);
-
-    GLint linkSuccess;
-    glGetProgramiv(programHandle, GL_LINK_STATUS, &linkSuccess);
-    if (linkSuccess == GL_FALSE) {
-        GLchar messages[256];
-        glGetProgramInfoLog(programHandle, sizeof(messages), 0, messages);
-        fprintf(stderr, "%s\n", messages);
-        exit(1);
-    }
-
-    glUseProgram(programHandle);
-
-    const GLuint positionSlot = glGetAttribLocation(programHandle, "Position");
-    const GLuint texCoordSlot = glGetAttribLocation(programHandle, "TexCoordIn");
-    const GLuint textureUniform = glGetUniformLocation(programHandle, "Texture");
-
-    glEnableVertexAttribArray(positionSlot);
-    glEnableVertexAttribArray(texCoordSlot);
-
-    glVertexAttribPointer(positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
-    glVertexAttribPointer(texCoordSlot, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*) (sizeof(float) * 3));
-    glBindTexture(GL_TEXTURE_2D, texture_id);
-    glActiveTexture(GL_TEXTURE0); 
-    glUniform1i(textureUniform, 0);
-    glDrawElements(GL_TRIANGLES, sizeof(Indices)/sizeof(Indices[0]), GL_UNSIGNED_BYTE, 0);
+    OpenGLHelpers::display_texture(image_texture_id, -1, 0, 0, 1);
+    OpenGLHelpers::display_texture(cpu_result_texture_id, 0, 1, 0, 1);
 }
