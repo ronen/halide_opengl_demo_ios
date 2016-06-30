@@ -7,6 +7,7 @@
 //
 
 #import <GLKit/GLKit.h>
+#import <dlfcn.h>
 
 #import "ViewController.h"
 #import "doit.h"
@@ -65,6 +66,22 @@
 }
 
 - (IBAction)runButtonPressed:(id)sender {
+}
+
+int halide_opengl_create_context(void *user_context) {
+    // nothing to do since we only call halide with the context current
+    // anyway
+    return 0;
+}
+
+// This method is called by the Halide runtime to populate a function pointer
+// lookup table. Since there is only one GLES implementation available on iOS
+// we simply forward the lookup to dlsym
+void *halide_opengl_get_proc_address(void *user_context, const char *name)
+{
+    void* symbol = dlsym(RTLD_NEXT,name);
+
+    return symbol;
 }
 
 

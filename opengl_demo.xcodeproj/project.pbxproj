@@ -12,6 +12,7 @@
 		365A025C1D25954F00E80429 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 365A02581D25954F00E80429 /* main.m */; };
 		365A025D1D25954F00E80429 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365A02591D25954F00E80429 /* ViewController.m */; };
 		365A02621D25962800E80429 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 365A02601D25962800E80429 /* Main.storyboard */; };
+		365A02701D25AF0600E80429 /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 365A026F1D25AF0600E80429 /* timer.cpp */; };
 		367A4F641D24655A006581CC /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367A4F631D24655A006581CC /* GLKit.framework */; };
 		367A4F661D246563006581CC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367A4F651D246563006581CC /* OpenGLES.framework */; };
 		367A4F6A1D257C1F006581CC /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 367A4F691D257C1F006581CC /* image.png */; };
@@ -26,6 +27,13 @@
 			remoteGlobalIDString = 365A02631D2596CF00E80429;
 			remoteInfo = "sample-filter-ios-cpu";
 		};
+		365A026D1D25A92000E80429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8CE6E1B1CA9A9C6006D8D23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 365A02691D25A8FF00E80429;
+			remoteInfo = sample_filter_opengl.o;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +43,7 @@
 		365A02591D25954F00E80429 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		365A025E1D25956D00E80429 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		365A02611D25962800E80429 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		365A026F1D25AF0600E80429 /* timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = timer.cpp; sourceTree = "<group>"; };
 		367A4F631D24655A006581CC /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		367A4F651D246563006581CC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		367A4F691D257C1F006581CC /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
@@ -69,6 +78,7 @@
 		B8CE6E1A1CA9A9C6006D8D23 = {
 			isa = PBXGroup;
 			children = (
+				365A026F1D25AF0600E80429 /* timer.cpp */,
 				365A02601D25962800E80429 /* Main.storyboard */,
 				365A025E1D25956D00E80429 /* Info.plist */,
 				365A02561D25954F00E80429 /* AppDelegate.m */,
@@ -106,6 +116,20 @@
 			passBuildSettingsInEnvironment = 0;
 			productName = "sample-filter-ios-cpu";
 		};
+		365A02691D25A8FF00E80429 /* sample_filter_opengl.o */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--always-make $(CONFIGURATION_BUILD_DIR)/build/$(PRODUCT_NAME) BUILD_DIR=$(CONFIGURATION_BUILD_DIR)/build TARGET_HOST=arm-64-ios-opengl";
+			buildConfigurationList = 365A026A1D25A8FF00E80429 /* Build configuration list for PBXLegacyTarget "sample_filter_opengl.o" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "$(PROJECT_DIR)";
+			dependencies = (
+			);
+			name = sample_filter_opengl.o;
+			passBuildSettingsInEnvironment = 0;
+			productName = "sample-filter-ios-cpu";
+		};
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
@@ -121,6 +145,7 @@
 			);
 			dependencies = (
 				365A02681D25970100E80429 /* PBXTargetDependency */,
+				365A026E1D25A92000E80429 /* PBXTargetDependency */,
 			);
 			name = opengl_demo;
 			productName = opengl_demo;
@@ -161,6 +186,7 @@
 			targets = (
 				B8CE6E221CA9A9C6006D8D23 /* opengl_demo */,
 				365A02631D2596CF00E80429 /* sample_filter_cpu.o */,
+				365A02691D25A8FF00E80429 /* sample_filter_opengl.o */,
 			);
 		};
 /* End PBXProject section */
@@ -182,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				365A02701D25AF0600E80429 /* timer.cpp in Sources */,
 				365A025A1D25954F00E80429 /* AppDelegate.m in Sources */,
 				365A025B1D25954F00E80429 /* doit.cpp in Sources */,
 				365A025C1D25954F00E80429 /* main.m in Sources */,
@@ -196,6 +223,11 @@
 			isa = PBXTargetDependency;
 			target = 365A02631D2596CF00E80429 /* sample_filter_cpu.o */;
 			targetProxy = 365A02671D25970100E80429 /* PBXContainerItemProxy */;
+		};
+		365A026E1D25A92000E80429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 365A02691D25A8FF00E80429 /* sample_filter_opengl.o */;
+			targetProxy = 365A026D1D25A92000E80429 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -225,6 +257,29 @@
 			name = Debug;
 		};
 		365A02661D2596CF00E80429 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		365A026B1D25A8FF00E80429 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		365A026C1D25A8FF00E80429 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -275,7 +330,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "$(CONFIGURATION_BUILD_DIR)/build/sample_filter_cpu.o";
+				OTHER_LDFLAGS = (
+					"$(CONFIGURATION_BUILD_DIR)/build/sample_filter_cpu.o",
+					"$(CONFIGURATION_BUILD_DIR)/build/sample_filter_opengl.o",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -374,6 +432,15 @@
 				365A02661D2596CF00E80429 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+		};
+		365A026A1D25A8FF00E80429 /* Build configuration list for PBXLegacyTarget "sample_filter_opengl.o" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				365A026B1D25A8FF00E80429 /* Debug */,
+				365A026C1D25A8FF00E80429 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8CE6E1E1CA9A9C6006D8D23 /* Build configuration list for PBXProject "opengl_demo" */ = {
 			isa = XCConfigurationList;
