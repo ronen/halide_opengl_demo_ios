@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIImage *ui_image = [UIImage imageNamed:@"puppy.jpg"];
+    UIImage *ui_image = [UIImage imageNamed:@"image.png"];
     CGImageRef cg_image = [ui_image CGImage];
 
     // self.imageView.image = ui_image
