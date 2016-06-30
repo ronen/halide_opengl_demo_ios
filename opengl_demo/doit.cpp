@@ -41,10 +41,10 @@ extern "C" void doit(const uint8_t *image_data, int image_width, int image_heigh
     } Vertex;
 
     const Vertex Vertices[] = {
-        {{1, -1, 0}, {1, 0}},
-        {{1, 1, 0}, {1, 1}},
-        {{-1, 1, 0}, {0, 1}},
-        {{-1, -1, 0}, {0, 0}},
+        {{1, -1, 0}, {1, 1}},
+        {{1, 1, 0}, {1, 0}},
+        {{-1, 1, 0}, {0, 0}},
+        {{-1, -1, 0}, {0, 1}},
     };
     const GLubyte Indices[] = {
         0, 1, 2,
