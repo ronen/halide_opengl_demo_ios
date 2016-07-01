@@ -199,20 +199,12 @@ namespace OpenGLHelpers {
     {
         OpenGLHelpers::check_error("starting create_texture");
         GLuint texture_id;
-        // glEnable(GL_TEXTURE_2D);
-        OpenGLHelpers::check_error("A");
         glGenTextures(1, &texture_id);
-        OpenGLHelpers::check_error("B");
         glBindTexture(GL_TEXTURE_2D, texture_id);
-        OpenGLHelpers::check_error("C");
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-        OpenGLHelpers::check_error("D");
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-        OpenGLHelpers::check_error("E");
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-        OpenGLHelpers::check_error("F");
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-        OpenGLHelpers::check_error("G");
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
         OpenGLHelpers::check_error("finished create_texture");
         return texture_id;
@@ -311,6 +303,10 @@ extern "C" void doit(const uint8_t *image_data, int width, int height)
 
     OpenGLHelpers::check_error("after draw CPU");
 
+    GLint fb;
+    glGetIntegerv(GL_FRAMEBUFFER_BINDING, &fb);
+    fprintf(stderr, "----------- framebuffer initial binding: %d\n", fb);
+
     /*
      * Draw the result of running the filter on OpenGL, with data starting
      * from and ending up on the host
@@ -328,6 +324,15 @@ extern "C" void doit(const uint8_t *image_data, int width, int height)
     const auto result_texture_id = OpenGLHelpers::create_texture(width, height, nullptr);
 
     report = run_opengl_filter_from_texture_to_texture(image_texture_id, result_texture_id, width, height);
+
+    GLint fb2;
+    glGetIntegerv(GL_FRAMEBUFFER_BINDING, &fb2);
+    fprintf(stderr, "----------- framebuffer binding is now: %d\n", fb2);
+
+    //glClearColor(1.0, 1.0, 1.0, 1.0);
+    //glClear(GL_COLOR_BUFFER_BIT);
+    //OpenGLHelpers::check_error("after glClear white");
+
     Layout::draw_texture(Layout::LR, result_texture_id, width, height, report);
     OpenGLHelpers::delete_texture(image_texture_id);
     OpenGLHelpers::delete_texture(result_texture_id);
